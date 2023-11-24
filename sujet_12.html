@@ -105,9 +105,22 @@
 
 <script type="text/javascript">
 
-    // YOUR CODE HERE
-
+    // calcul de f(x) et retourne le résultat
+    function f(x) {
+        let result = (100/x) + ((2*x)/3) - 20;
+        return result;
+    }
     
+    /* range dans un tableau les valeurs de f(x)
+     * Appelle la fonction displayDividedArray pour découper le tableau en parties de longueur 20 et afficher chaque partie.
+     */
+    function compute() {
+        let resultArray = [];
+        for (i = 1; i <= 100; i++) {
+            resultArray.push((f(i)).toFixed(2));  
+        }
+        displayDividedArray(resultArray, 20);
+    }
 </script>
 </body>
 </html>

@@ -16,6 +16,20 @@ function displayArray (tab) {
     document.writeln (out);
 }
 
+/*
+ * Affiche le contenu d'un tableau découpé en plusieurs parties de longueur définie à la fin courante du document html.
+ * Le résultat est présenté sous forme de table HTML dans un bloc de type "cartouche".
+ * Paramètres: le tableau (type Array) à découper et la taille maximum des différentes parties.
+ * Retour :
+ */
+
+function displayDividedArray(array, partSize) {
+    let part = [];
+    for (i = 0; i < array.length; i += partSize) {
+        part = array.slice(i, i + partSize);
+        displayArray(part);
+    }
+}
 
 /*
  * Affiche un résultat à la fin courante du document html.
